@@ -1,0 +1,14 @@
+.searchBar {
+  display: "flex";
+  align-items: center;
+  justify-content: center;
+  width: 800px;
+  height: 400px;
+  margin: 100px;
+  text-align: center;
+  text-emphasis: none;
+}
+.searchGif {
+  height: 55px;
+  width: 55px;
+}

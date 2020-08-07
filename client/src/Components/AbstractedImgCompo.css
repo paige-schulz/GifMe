@@ -1,0 +1,14 @@
+
+.list {
+  list-style-type: none;
+ }
+ .SaveButton {
+   background-color: lightcoral;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 26px;
+  border-radius: 4px;
+ }

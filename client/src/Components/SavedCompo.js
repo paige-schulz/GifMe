@@ -1,0 +1,30 @@
+import React from "react";
+import "./SavedImgsCompo"
+import SavedImgsCompo from "./SavedImgsCompo";
+
+
+export default class SavedCompo extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      apiResponse: [],
+    };
+  }
+
+  componentDidMount() {
+    fetch("http://localhost:8080/imageids")
+      .then((res) => {
+        return res.json();
+      })
+      .then((res) => {
+        console.log(res);
+        this.setState({ apiResponse: res });
+      });
+  }
+  render() {
+    var imageId = this.state.apiResponse.map((x) => {
+      return <SavedImgsCompo id={x.id}></SavedImgsCompo>;
+    });
+    return <div>{imageId}</div>;
+  }
+}

@@ -1,0 +1,10 @@
+.photo {
+  display: "flex";
+  align-items: center;
+  justify-content: center;
+  width: 1000px;
+  height: 400px;
+  margin: 200px;
+  text-align: center;
+  text-emphasis: none;
+}
