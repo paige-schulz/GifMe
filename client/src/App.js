@@ -18,10 +18,10 @@ function App() {
         <Route path="/" exact component={PhotoCompo} />
         <Route path="/trending" exact component={TrendingCompo}></Route>
         <Route path="/Saved" exact component={SavedCompo}></Route>
-        <RandomGifButtonCompo></RandomGifButtonCompo>
+        
+        <Route path="/Random" exact component={RandomGifButtonCompo}></Route>
       </div>
     </Router>
   );
 }
-
 export default App;

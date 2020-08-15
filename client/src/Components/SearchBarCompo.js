@@ -49,6 +49,25 @@ export default class SearchBarCompo extends React.Component {
       .catch((err) => {
         console.log(err);
       });
+      //figma stuff
+    const proxyurl = "https://cors-anywhere.herokuapp.com/";
+    fetch(proxyurl +'https://www.figma.com/file/PoRsFjY08S89ajWjVxDkRW/Untitled?node-id=5%3A2',
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+    )
+    .then((res) => {
+      return res.json();
+    })
+    .then((res) => {
+      console.log(res);
+    })
+    .catch((err) => {
+      console.log(err);
+    })
   }
 
   render() {
@@ -67,7 +86,7 @@ export default class SearchBarCompo extends React.Component {
         <div className="searchBar1">
           <form>
             <label htmlFor="search">Search: </label>
-            <input id="search" type="text" onChange={this.handleChange}></input>
+            <input className="search3" id="search" type="text" onChange={this.handleChange}></input>
           </form>
         </div>
         <div className="searchGif">{searchGifList}</div>

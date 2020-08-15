@@ -89,9 +89,9 @@ export default class PhotoCompo extends React.Component {
       <div className="photo">
         <div>
           <form onSubmit={this.handleSubmit}>
-            <label>
+            <label >
               Upload Picture:
-              <input
+              <input 
                 type="file"
                 onChange={this.onChange}
                 ref={this.fileInput}
@@ -99,6 +99,7 @@ export default class PhotoCompo extends React.Component {
             </label>
           </form>
         </div>
+        <br></br>
         <SearchBarCompo></SearchBarCompo>
         <div>{objectList}</div>
       </div>

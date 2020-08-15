@@ -2,8 +2,8 @@
   width: 100vw;
   top: 0;
   position: fixed;
-  background-color: rgb(146, 221, 196);
-  height: 100px;
+  background-color: #9AB5C1;
+  height: 125px;
 }
 .navbar2 {
   display: flex;
@@ -12,13 +12,13 @@
   padding: 0 1rem;
 }
 .navbar_logo a {
-  color: gray;
+  color: #59748C;
   text-decoration: none;
   font-size: 2rem;
   font-weight: bolder;
 }
 .navbar_items a {
-  color: gray;
+  color: #59748C;
   text-decoration: none;
   font-weight: bold;
 }

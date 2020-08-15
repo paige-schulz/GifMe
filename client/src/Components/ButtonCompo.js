@@ -33,6 +33,7 @@ export default class ButtonCompo extends React.Component {
         <form >
           <label className="tags" htmlFor="search">Add Tags: </label>
           <input className="form"
+            placeholder="#"
             type="text"
             value={this.state.value}
             onChange={this.handleChange}

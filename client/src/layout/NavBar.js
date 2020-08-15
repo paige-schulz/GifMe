@@ -11,7 +11,7 @@ export default class NavBar extends React.Component {
       <div className="navbar">
         <nav className="navbar2">
           <div className="navbar_logo">
-            <a href="/">GIF WEBSITE</a>
+            <a href="/">GifMe</a>
           </div>
           <div className="space" />
           <div className="navbar_items">
@@ -27,6 +27,9 @@ export default class NavBar extends React.Component {
               </li>
               <li> 
                 <a href="/Saved"> Saved</a>
+              </li>
+              <li>
+                <a href="/Random"> Random Gif</a>
               </li>
             </ul>
           </div>

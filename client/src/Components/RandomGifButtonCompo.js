@@ -38,11 +38,13 @@ export default class RandomGifButtonCompo extends React.Component {
         
         <button className="randomButton" onClick={this.handleChange}>
           {" "}
-          Generate a Random Gif!
+          Click for Random Gif
         </button>
+        <div className="image1">
         <img className="image" src={this.state.value}></img>
         <CheckBox></CheckBox>
         <ButtonCompo></ButtonCompo>
+        </div>
         
       </div>
     );
