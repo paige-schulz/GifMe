@@ -20,7 +20,7 @@ export default class NavBar extends React.Component {
                 <a href="/">Home</a>
               </li>
               <li>
-                <a href="/">Likes</a>
+                <a href="/likes">Likes</a>
               </li>
               <li>
                 <a href="/trending">Trending</a>

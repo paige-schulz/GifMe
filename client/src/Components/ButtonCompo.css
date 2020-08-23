@@ -1,27 +1,53 @@
-.button {
-  background-color: #59748C;
-  border: none;
-  color: white;
-  text-align: center;
+.likeButton {
+  display:inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid black;
+  margin:0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
   text-decoration: none;
-  font-size: 16px;
-  border-radius: 4px;
-  flex-direction: row;
+  letter-spacing: 2px;
+  font-family: "Lucida Console", Courier, monospace;
+  font-weight:300;
+  color: #233142;
+  text-align: center;
+  transition: all 0.2s;
+  font-weight: bold;
+}
+.likeButton:hover {
+    color:white;
+    background-color: #233142;
 }
 .caption {
   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #59748C,
     0 0 70px #59748C, 0 0 80px #59748C, 0 0 100px #59748C, 0 0 150px #59748C;
-  color: #59748C;
+  color: #233142;
   font-weight: bold;
-}
-.form {
-  border-color: #59748C;
-  border-radius: 4px;
-  
+  letter-spacing: 1.25px;
+  font-family: "Lucida Console", Courier, monospace;
 }
 .tags {
   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #59748C,
     0 0 70px #59748C, 0 0 80px #59748C, 0 0 100px #59748C, 0 0 150px #59748C;
-  color: #59748C;
+  color: #233142;
+  font-weight: bold;
+  letter-spacing: 1.25px;
+  font-family: "Lucida Console", Courier, monospace;
+  
+}
+.saveButton {
+    display:inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid black;
+  margin:0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-family: "Lucida Console", Courier, monospace;
+  font-weight:300;
+  color: #233142;
+  text-align: center;
+  transition: all 0.2s;
   font-weight: bold;
 }

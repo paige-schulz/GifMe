@@ -5,7 +5,7 @@ import { View } from "react";
 import "./AbstractedImgCompo.css";
 import { Stylesheet, Text, FlatList, Dimensions } from "react";
 import ButtonCompo from "./ButtonCompo";
-import Checkbox from "./CheckBox";
+import SavedLikesCompo from "./SavedLikesCompo";
 
 //this component is meant for displaying extracted images and corresponding gifs
 export default class AbstractedImgCompo extends React.Component {
@@ -16,7 +16,6 @@ export default class AbstractedImgCompo extends React.Component {
     this.state = {
       gifsArray: [],
       count: 0,
-      checkBoxsState: []
     };
   }
 
@@ -56,9 +55,7 @@ export default class AbstractedImgCompo extends React.Component {
       .then((res1) => {
         console.log(res1);
         console.log("before setting state");
-        for(var i = 0; i < res1.data.length; i++) {
-          this.state.checkBoxsState.push(false);
-        }
+       
         this.setState({
           gifsArray: res1.data,
         });
@@ -85,22 +82,12 @@ export default class AbstractedImgCompo extends React.Component {
   };
   render() {
     var gifList = this.state.gifsArray.map((x, i) => {
-      console.log(x.url);
       return (
         <li>
           <ul className="list1">
             <img src={x.images.downsized.url}></img>
             <li>
-              <ButtonCompo></ButtonCompo>
-              <div className="check" >
-                <input
-                  id="checkbox_id"
-                  type="checkbox"
-                  checked={false}
-                  onChange={this.onChange(i)}
-                />
-                <label htmlFor="checkbox_id"></label>
-              </div>
+              <ButtonCompo gifUrl={x.images.downsized.url}></ButtonCompo>
               <br /> 
             </li>
           </ul>
@@ -111,10 +98,11 @@ export default class AbstractedImgCompo extends React.Component {
     return (
       <div>
         <div>
-          <canvas ref={this.myRef} width={800} height={800} />
+          <canvas className="img" ref={this.myRef} width={this.props.objectRef.rectangle.w} 
+          height={this.props.objectRef.rectangle.h} />
         </div>
         <div>{gifList}</div>
-        <button className="SaveButton" onClick={this.clickSubmitButton()}> Save</button>
+        
       </div>
     );
   }

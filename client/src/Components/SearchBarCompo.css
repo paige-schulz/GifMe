@@ -11,8 +11,8 @@
 }
 .searchBar1:after {
   content: "Search";
-	position: absolute; left: 546px; top: 247px;
-	color: #9AB5C1;
+	position: absolute; left: 507px; top: 266px;
+	color: #59748C;
 }
 
 .searchGif {
@@ -21,9 +21,9 @@
 }
 .search3 {
   border: 1px solid grey;
-    border-radius: 5px;
-    height: 20px;
-    padding: 2px 23px 2px 30px;
+    border-radius: 2px;
+    height: 15px;
+    padding: 6px 8px 2px 30px;
     outline: 0;
     background-color: #f5f5f5;
 }

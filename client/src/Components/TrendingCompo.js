@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import ButtonCompo from "./ButtonCompo";
 import "./TrendingCompo.css";
-import Checkbox from "./CheckBox";
 
 export default class TrendingCompo extends React.Component {
   constructor(props) {
@@ -35,8 +34,8 @@ export default class TrendingCompo extends React.Component {
   render() {
     var trendingList = this.state.value.map((x) => {
       return <div className="trending"><img src={x.images.downsized.url}></img> 
-      <ButtonCompo></ButtonCompo> 
-      <Checkbox></Checkbox></div>
+      <ButtonCompo gifUrl={x.images.downsized.url}></ButtonCompo> 
+      </div>
       
     });
     return <div>{trendingList}</div>;

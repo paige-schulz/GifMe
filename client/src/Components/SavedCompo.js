@@ -1,7 +1,6 @@
 import React from "react";
-import "./SavedImgsCompo"
+import "./SavedImgsCompo";
 import SavedImgsCompo from "./SavedImgsCompo";
-
 
 export default class SavedCompo extends React.Component {
   constructor(props) {
@@ -12,7 +11,7 @@ export default class SavedCompo extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:8080/imageids")
+    fetch("http://localhost:8080/getSaved")
       .then((res) => {
         return res.json();
       })
@@ -23,8 +22,10 @@ export default class SavedCompo extends React.Component {
   }
   render() {
     var imageId = this.state.apiResponse.map((x) => {
-      return <SavedImgsCompo id={x.id}></SavedImgsCompo>;
+      return <SavedImgsCompo storedGif={x}></SavedImgsCompo>;
     });
-    return <div>{imageId}</div>;
+    var reversedImageId2 = imageId.reverse();
+    return <div>{reversedImageId2}</div>;
+  
   }
 }

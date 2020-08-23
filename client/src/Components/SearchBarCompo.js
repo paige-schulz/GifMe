@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./SearchBarCompo.css";
 import ButtonCompo from "./ButtonCompo";
-import Checkbox from "./CheckBox";
 
 export default class SearchBarCompo extends React.Component {
   constructor(props) {
@@ -75,8 +74,7 @@ export default class SearchBarCompo extends React.Component {
       return (
         <li>
           <img src={x.images.downsized.url}></img>
-          <ButtonCompo></ButtonCompo>
-          <Checkbox className="check"></Checkbox>
+          <ButtonCompo gifUrl={x.images.downsized.url}></ButtonCompo>
         </li>
       ); 
     });

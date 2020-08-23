@@ -4,6 +4,7 @@
   position: fixed;
   background-color: #9AB5C1;
   height: 125px;
+  font-family: "Lucida Console", Courier, monospace;
 }
 .navbar2 {
   display: flex;
@@ -25,10 +26,7 @@
 .space {
   flex: 1;
 }
-.navbar_items a:hover,
-.navbar_items a:active {
-  color: rebeccapurple;
-}
+
 .navbar_items ul {
   list-style: none;
   margin: 0;
