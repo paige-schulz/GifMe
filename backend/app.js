@@ -12,9 +12,7 @@ app.use(
     extended: true,
   })
 );
-app.get("/", (req, res) => {
-  res.send("hello paige is cute");
-});
+
 
 app.post('/save', (req, res) => {
   console.log(req.body);
